@@ -11,19 +11,17 @@ function App() {
     desc: "",
     autor: "",
     job: "",
-    image: "https://genweb.upc.edu/ca/documentacio/cursos/creacio-i-personalitzacio-de-plantilles/img/user.jpg",
-    photo: "https://www.itmplatform.com/wp-content/uploads/33664005_m.jpg",
+    image: '',
+    photo: '',
   });
 
   const handleProyectName = (event) => {
     const inputName = event.target.name;
     const inputValue = event.target.value;
 
-    setData({ ...data,[inputName]:inputValue });  
+    setData({ ...data, [inputName]: inputValue });
     //pendiente de explicación
   };
-
-  
 
   return (
     <div>
@@ -71,17 +69,18 @@ function App() {
               <div className="card__author">
                 <div className="card__authorPhoto"></div>
                 <p className="card__job">Full stack Developer</p>
-                <h3 className="card__name">{data.name}</h3>
+                <h3 className="card__name">{data.name}Emmelie Björklund</h3>
               </div>
 
               <div className="card__project">
                 <h3 className="card__name">Elegant Workspace</h3>
-                <p className="card__slogan">{data.slogan}</p>
+                <p className="card__slogan">{data.slogan}Diseños exclusivos</p>
                 <h3 className="card__descriptionTitle">Product description</h3>
-                <p className="card__description">
+                <p className="card__description">{data.desc}
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Nulla, quos? Itaque, molestias eveniet laudantium adipisci
-                  vitae ratione
+                  vitae ratione. 
+                  
                 </p>
 
                 <div className="card__technicalInfo">
@@ -144,7 +143,7 @@ function App() {
                   type="url"
                   name="demo"
                   id="demo"
-                  value={data.name}
+                  value={data.demo}
                   placeholder="Demo"
                   onChange={handleProyectName}
                 />
@@ -154,7 +153,7 @@ function App() {
                 type="text"
                 name="technologies"
                 id="technologies"
-                value={data.name}
+                value={data.technologies}
                 placeholder="Tecnologías"
                 onChange={handleProyectName}
               />
@@ -163,7 +162,7 @@ function App() {
                 type="text"
                 name="desc"
                 id="desc"
-                value={data.name}
+                value={data.desc}
                 placeholder="Descripción"
                 rows="5"
                 onChange={handleProyectName}
@@ -179,7 +178,7 @@ function App() {
                 type="text"
                 name="autor"
                 id="autor"
-                value={data.name}
+                value={data.autor}
                 placeholder="Nombre"
                 onChange={handleProyectName}
               />
@@ -188,7 +187,7 @@ function App() {
                 type="text"
                 name="job"
                 id="job"
-                value={data.name}
+                value={data.job}
                 placeholder="Trabajo"
                 onChange={handleProyectName}
               />
@@ -203,7 +202,7 @@ function App() {
                 type="file"
                 name="image"
                 id="image"
-                value={data.name}
+                value={data.image}
                 onChange={handleProyectName}
               />
               <label htmlFor="photo" className="button">
@@ -214,7 +213,7 @@ function App() {
                 type="file"
                 name="photo"
                 id="photo"
-                value={data.name}
+                value={data.photo}
                 onChange={handleProyectName}
               />
               <button className="button--large">Guardar proyecto</button>
@@ -235,8 +234,6 @@ function App() {
 }
 
 export default App;
-
-
 
 // name: "",
 //     slogan: "",
