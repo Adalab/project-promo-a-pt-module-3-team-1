@@ -68,25 +68,23 @@ function App() {
 
               <div className="card__author">
                 <div className="card__authorPhoto"></div>
-                <p className="card__job">Full stack Developer</p>
+                <p className="card__job"> {data.job === "" ? "Full stack Developer" : data.job}</p>
                 <h3 className="card__name">
-                  {data.name === "" ? "Emmelie Björklund" : data.name}
+                  {data.autor === "" ? "Emmelie Björklund" : data.autor}
                 </h3>
               </div>
 
               <div className="card__project">
-                <h3 className="card__name">Elegant Workspace</h3>
-                <p className="card__slogan">{data.slogan}Diseños exclusivos</p>
+                <h3 className="card__name"> {data.name === "" ? "Elegant Workspace" : data.name}</h3>
+                <p className="card__slogan">{data.slogan ==="" ? "Diseños exclusivos" : data.slogan}</p>
                 <h3 className="card__descriptionTitle">Product description</h3>
                 <p className="card__description">
-                  {data.desc}
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Nulla, quos? Itaque, molestias eveniet laudantium adipisci
-                  vitae ratione.
+                  {data.desc ==="" ? "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Nulla, quos? Itaque, molestias eveniet laudantium adipisci vitae ratione." : data.desc}
+                  
                 </p>
 
                 <div className="card__technicalInfo">
-                  <p className="card__technologies">React JS - HTML - CSS</p>
+                  <p className="card__technologies">{data.technologies === "" ? "React JS - HTML - CSS" : data.technologies}</p>
 
                   <a
                     className="icon icon__www"
