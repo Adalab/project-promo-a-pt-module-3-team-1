@@ -1,10 +1,10 @@
 import '../scss/App.scss';
-//import { useState } from 'react';
+
 import Header from './Header';
-import Main from './main';
+import Main from './Main';
 
 function App() {
-  /* const [data, setData] = useState({
+  /*const [data, setData] = useState({
     name: '',
     slogan: '',
     technologies: '',
@@ -15,16 +15,16 @@ function App() {
     job: '',
     image: '',
     photo: '',
-  }); */
+  });*/
 
-  /*  const handleProyectName = (event) => {
+    /*const handleProyectName = (event) => {
     const inputName = event.target.name;
     const inputValue = event.target.value;
 
     setData({ ...data, [inputName]: inputValue });
     //pendiente de explicación
-  };
-  */
+    }*/
+
   return (
     <div>
       <div className="container">

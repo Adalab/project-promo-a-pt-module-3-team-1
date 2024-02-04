@@ -1,7 +1,8 @@
 import { useState } from 'react';
 
 function Main() {
-  const [data] = useState({
+
+  const [data, setData] = useState({
     name: '',
     slogan: '',
     technologies: '',
@@ -12,7 +13,16 @@ function Main() {
     job: '',
     image: '',
     photo: '',
-  });
+  })
+
+  const handleProyectName = (event) => {
+    const inputName = event.target.name;
+    const inputValue = event.target.value;
+
+    setData({ ...data, [inputName]: inputValue });
+    //pendiente de explicación
+  }
+  
   return (
     <main className="main">
       <section className="hero">
@@ -102,7 +112,7 @@ function Main() {
             id="name"
             value={data.name}
             placeholder="Nombre del proyecto"
-            //onChange={handleProyectName}
+            onChange={handleProyectName}
           />
           <input
             className="addForm__input"
@@ -111,7 +121,7 @@ function Main() {
             id="slogan"
             value={data.slogan}
             placeholder="Slogan"
-            // onChange={handleProyectName}
+            onChange={handleProyectName}
           />
           <div className="addForm__2col">
             <input
@@ -121,7 +131,7 @@ function Main() {
               id="repo"
               value={data.repo}
               placeholder="Repositorio"
-              // onChange={handleProyectName}
+              onChange={handleProyectName}
             />
             <input
               className="addForm__input"
@@ -130,7 +140,7 @@ function Main() {
               id="demo"
               value={data.demo}
               placeholder="Demo"
-              // onChange={handleProyectName}
+              onChange={handleProyectName}
             />
           </div>
           <input
@@ -140,7 +150,7 @@ function Main() {
             id="technologies"
             value={data.technologies}
             placeholder="Tecnologías"
-            // onChange={handleProyectName}
+            onChange={handleProyectName}
           />
           <textarea
             className="addForm__input"
@@ -150,7 +160,7 @@ function Main() {
             value={data.desc}
             placeholder="Descripción"
             rows="5"
-            // onChange={handleProyectName}
+            onChange={handleProyectName}
           ></textarea>
         </fieldset>
 
@@ -163,7 +173,7 @@ function Main() {
             id="autor"
             value={data.autor}
             placeholder="Nombre"
-            // onChange={handleProyectName}
+            onChange={handleProyectName}
           />
           <input
             className="addForm__input"
@@ -172,7 +182,7 @@ function Main() {
             id="job"
             value={data.job}
             placeholder="Trabajo"
-            // onChange={handleProyectName}
+            onChange={handleProyectName}
           />
         </fieldset>
 
@@ -186,7 +196,7 @@ function Main() {
             name="image"
             id="image"
             value={data.image}
-            // onChange={handleProyectName}
+            onChange={handleProyectName}
           />
           <label htmlFor="photo" className="button">
             Subir foto de la autora
@@ -197,7 +207,7 @@ function Main() {
             name="photo"
             id="photo"
             value={data.photo}
-            //  onChange={handleProyectName}
+            onChange={handleProyectName}
           />
           <button className="button--large">Guardar proyecto</button>
         </fieldset>
