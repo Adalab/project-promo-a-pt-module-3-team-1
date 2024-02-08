@@ -117,14 +117,14 @@ function Form({ data, changeData }) {
           value={data.photo}
           onChange={handleProyectName}
         />
-       <ButtonLarge/>
+        <ButtonLarge />
       </fieldset>
     </form>
   );
 }
 
 Form.propTypes = {
-  data: PropTypes.array.isRequired,
+  data: PropTypes.object.isRequired,
   changeData: PropTypes.func.isRequired,
 };
 export default Form;

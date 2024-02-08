@@ -15,7 +15,7 @@ function Create({ changeData, data }) {
 }
 
 Create.propTypes = {
-  data: PropTypes.array.isRequired,
+  data: PropTypes.object.isRequired,
   changeData: PropTypes.func.isRequired,
 };
 

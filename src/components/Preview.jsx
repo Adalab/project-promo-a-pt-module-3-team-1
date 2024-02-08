@@ -1,15 +1,14 @@
 import PropTypes from 'prop-types';
-import Card from "./Card";
+import Card from './Card';
 
-function Preview({data} ) {
+function Preview({ data }) {
   return (
     <section className="preview">
-    <Card data={data}/>
+      <Card data={data} />
     </section>
   );
 }
 Preview.propTypes = {
-  data: PropTypes.array.isRequired
-}
+  data: PropTypes.object.isRequired,
+};
 export default Preview;
-
