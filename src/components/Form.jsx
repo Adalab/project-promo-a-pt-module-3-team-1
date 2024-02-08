@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import ButtonLarge from './ButtonLarge';
 
 function Form({ data, changeData }) {
   const handleProyectName = (event) => {
@@ -116,7 +117,7 @@ function Form({ data, changeData }) {
           value={data.photo}
           onChange={handleProyectName}
         />
-        <button className="button--large">Guardar proyecto</button>
+       <ButtonLarge/>
       </fieldset>
     </form>
   );

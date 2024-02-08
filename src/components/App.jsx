@@ -2,6 +2,7 @@ import { useState } from 'react';
 import '../scss/App.scss';
 import Header from './Header';
 import Create from './Create';
+import Footer from './Footer';
 
 function App() {
   const [data, setData] = useState({
@@ -27,13 +28,7 @@ function App() {
         <Header />
         <Create data={data} changeData={changeData} />
 
-        <footer className="footer">
-          <img
-            className="logoSponsor"
-            src="./images/adalab.png"
-            alt="Logo Adalab"
-          />
-        </footer>
+      <Footer/>
       </div>
     </div>
   );

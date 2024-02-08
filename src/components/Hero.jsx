@@ -1,3 +1,5 @@
+import ButtonLink from "./ButtonLink";
+
 function Hero () {
 
   return (
@@ -6,9 +8,7 @@ function Hero () {
     <p className="hero__text">
       Escaparate en línea para recoger ideas a través de la tecnología
     </p>
-    <a className="button--link" href="./LandingApp">
-      Ver proyectos
-    </a>
+    <ButtonLink/>
   </section>
     
   );
