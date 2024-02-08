@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import '../scss/App.scss';
-
 import Header from './Header';
 import Create from './Create';
 
