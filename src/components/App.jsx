@@ -20,15 +20,34 @@ function App() {
 
   const changeData = (inputName, inputValue) => {
     setData({ ...data, [inputName]: inputValue });
+    const clonData = { ...data };
+    clonData[inputName] = inputValue;
+    setData(clonData);
+  };
+
+  const updateAvatarAuthor = (avatar) => {
+    const clonData = { ...data };
+    clonData.photo = avatar;
+    setData(clonData);
+  };
+  const updateAvatarProject = (avatar) => {
+    const clonData = { ...data };
+    clonData.image = avatar;
+    setData(clonData);
   };
 
   return (
     <div>
       <div className="container">
         <Header />
-        <Create data={data} changeData={changeData} />
+        <Create
+          data={data}
+          changeData={changeData}
+          updateAvatarAuthor={updateAvatarAuthor}
+          updateAvatarProject={updateAvatarProject}
+        />
 
-      <Footer/>
+        <Footer />
       </div>
     </div>
   );

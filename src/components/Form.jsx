@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import ButtonLarge from './ButtonLarge';
+import GetAvatar from './GetAvatar';
 
-function Form({ data, changeData }) {
+function Form({ data, changeData, updateAvatarAuthor, updateAvatarProject }) {
   const handleProyectName = (event) => {
     const inputName = event.target.name;
     const inputValue = event.target.value;
@@ -95,7 +96,11 @@ function Form({ data, changeData }) {
       </fieldset>
 
       <fieldset className="addForm__group--upload">
-        <label htmlFor="image" className="button">
+        <GetAvatar
+          text=" Subir foto del proyecto"
+          updateAvatar={updateAvatarProject}
+        ></GetAvatar>
+        {/*  <label htmlFor="image" className="button">
           Subir foto del proyecto
         </label>
         <input
@@ -105,8 +110,12 @@ function Form({ data, changeData }) {
           id="image"
           value={data.image}
           onChange={handleProyectName}
-        />
-        <label htmlFor="photo" className="button">
+  />*/}
+        <GetAvatar
+          text=" Subir foto de la autora"
+          updateAvatar={updateAvatarAuthor}
+        ></GetAvatar>
+        {/* <label htmlFor="photo" className="button">
           Subir foto de la autora
         </label>
         <input
@@ -116,7 +125,7 @@ function Form({ data, changeData }) {
           id="photo"
           value={data.photo}
           onChange={handleProyectName}
-        />
+        /> */}
         <ButtonLarge />
       </fieldset>
     </form>
@@ -126,5 +135,7 @@ function Form({ data, changeData }) {
 Form.propTypes = {
   data: PropTypes.object.isRequired,
   changeData: PropTypes.func.isRequired,
+  updateAvatarAuthor: PropTypes.func.isRequired,
+  updateAvatarProject: PropTypes.func.isRequired,
 };
 export default Form;

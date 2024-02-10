@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 function Card({ data }) {
   return (
     <>
-      <div className="projectImage"></div>
       <article className="card">
         <h2 className="card__projectTitle">
           <span className="card__projectTitle--text">
@@ -11,7 +10,10 @@ function Card({ data }) {
         </h2>
 
         <div className="card__author">
-          <div className="card__authorPhoto"></div>
+          <div
+            className="card__authorPhoto"
+            style={{ backgroundImage: data.photo && `url(${data.photo})` }}
+          ></div>
           <p className="card__job">
             {' '}
             {data.job === '' ? 'Full stack Developer' : data.job}
