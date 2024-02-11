@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import ButtonLarge from './ButtonLarge';
 import GetAvatar from './GetAvatar';
 
-function Form({ data, changeData, updateAvatarAuthor, updateAvatarProject }) {
+function Form({ data, changeData, updateAvatarAuthor, updateAvatarProject, onSubmit }) {
   const handleProyectName = (event) => {
     const inputName = event.target.name;
     const inputValue = event.target.value;
@@ -126,7 +126,7 @@ function Form({ data, changeData, updateAvatarAuthor, updateAvatarProject }) {
           value={data.photo}
           onChange={handleProyectName}
         /> */}
-        <ButtonLarge />
+        <ButtonLarge text="Guardar Proyecto" onSubmit={onSubmit}/>
       </fieldset>
     </form>
   );
@@ -137,5 +137,6 @@ Form.propTypes = {
   changeData: PropTypes.func.isRequired,
   updateAvatarAuthor: PropTypes.func.isRequired,
   updateAvatarProject: PropTypes.func.isRequired,
+  onSubmit:PropTypes.func
 };
 export default Form;

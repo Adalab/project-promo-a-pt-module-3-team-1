@@ -1,21 +1,21 @@
-import { useState } from 'react';
-import '../scss/App.scss';
-import Header from './Header';
-import Create from './Create';
-import Footer from './Footer';
+import { useState } from "react";
+import "../scss/App.scss";
+import Header from "./Header";
+import Create from "./Create";
+import Footer from "./Footer";
 
 function App() {
   const [data, setData] = useState({
-    name: '',
-    slogan: '',
-    technologies: '',
-    demo: '',
-    repo: '',
-    desc: '',
-    autor: '',
-    job: '',
-    image: '',
-    photo: '',
+    name: "",
+    slogan: "",
+    technologies: "",
+    demo: "",
+    repo: "",
+    desc: "",
+    autor: "",
+    job: "",
+    image: "",
+    photo: "",
   });
 
   const changeData = (inputName, inputValue) => {
@@ -36,6 +36,21 @@ function App() {
     setData(clonData);
   };
 
+  const handleFetchCreate = () => {
+    fetch("https://dev.adalab.es/api/projectCard", 
+    {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then(response => response.json())
+      .then(dataResponse => {
+        console.log("Llegó el Fetch!");
+
+        console.log(dataResponse);
+      });
+  };
+
   return (
     <div>
       <div className="container">
@@ -45,6 +60,7 @@ function App() {
           changeData={changeData}
           updateAvatarAuthor={updateAvatarAuthor}
           updateAvatarProject={updateAvatarProject}
+          onSumbit={handleFetchCreate}
         />
 
         <Footer />
