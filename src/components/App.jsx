@@ -17,6 +17,7 @@ function App() {
     image: "",
     photo: "",
   });
+  const [ responseFetch, setResponseFetch ] = useState('');
 
   const changeData = (inputName, inputValue) => {
     setData({ ...data, [inputName]: inputValue });
@@ -36,7 +37,7 @@ function App() {
     setData(clonData);
   };
 
-  const handleFetchCreate = () => {
+  const handleFetchCreate = (data) => {
     fetch("https://dev.adalab.es/api/projectCard", 
     {
       method: "POST",
@@ -47,7 +48,9 @@ function App() {
       .then(dataResponse => {
         console.log("Llegó el Fetch!");
 
-        console.log(dataResponse);
+        console.log(data);
+        setResponseFetch(dataResponse);
+      
       });
   };
 
@@ -61,6 +64,7 @@ function App() {
           updateAvatarAuthor={updateAvatarAuthor}
           updateAvatarProject={updateAvatarProject}
           onSumbit={handleFetchCreate}
+          responseFetch={responseFetch}
         />
 
         <Footer />

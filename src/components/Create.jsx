@@ -4,7 +4,7 @@ import Form from './Form';
 import Hero from './Hero';
 import Preview from './Preview';
 
-function Create({ updateAvatarAuthor, updateAvatarProject, changeData, data, onSubmit }) {
+function Create({ updateAvatarAuthor, updateAvatarProject, changeData, data, onSubmit, responseFetch }) {
   return (
     <main className="main">
       <Hero />
@@ -15,6 +15,7 @@ function Create({ updateAvatarAuthor, updateAvatarProject, changeData, data, onS
         changeData={changeData}
         data={data}
         onSubmit={onSubmit}
+        responseFetch={responseFetch}
       />
     </main>
   );
@@ -25,7 +26,8 @@ Create.propTypes = {
   changeData: PropTypes.func.isRequired,
   updateAvatarAuthor: PropTypes.func.isRequired,
   updateAvatarProject: PropTypes.func.isRequired,
-  onSubmit:PropTypes.func
+  onSubmit:PropTypes.func,
+  responseFetch:PropTypes.array
 };
 
 export default Create;
