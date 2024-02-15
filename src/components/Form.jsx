@@ -1,6 +1,6 @@
-import PropTypes from "prop-types";
-import ButtonLarge from "./ButtonLarge";
-import GetAvatar from "./GetAvatar";
+import PropTypes from 'prop-types';
+import ButtonLarge from './ButtonLarge';
+import GetAvatar from './GetAvatar';
 
 function Form({
   data,
@@ -107,40 +107,22 @@ function Form({
           text=" Subir foto del proyecto"
           updateAvatar={updateAvatarProject}
         ></GetAvatar>
-        {/*  <label htmlFor="image" className="button">
-          Subir foto del proyecto
-        </label>
-        <input
-          className="addForm__hidden"
-          type="file"
-          name="image"
-          id="image"
-          value={data.image}
-          onChange={handleProyectName}
-  />*/}
+
         <GetAvatar
           text=" Subir foto de la autora"
           updateAvatar={updateAvatarAuthor}
         ></GetAvatar>
-        {/* <label htmlFor="photo" className="button">
-          Subir foto de la autora
-        </label>
-        <input
-          className="addForm__hidden"
-          type="file"
-          name="photo"
-          id="photo"
-          value={data.photo}
-          onChange={handleProyectName}
-        /> */}
+
         <ButtonLarge text="Guardar Proyecto" onSubmit={onSubmit} />
-        {responseFetch !== "" && responseFetch.success && (
+        {responseFetch !== '' && responseFetch.success && (
           <p>
-            Tu proyecto ha sido creado en la siguiente dirección:{" "}
-            <a href={responseFetch.cardURL}>{responseFetch.cardURL}</a>
+            Tu proyecto ha sido creado en la siguiente dirección:{' '}
+            <a target="_blank" rel="noreferrer" href={responseFetch.cardURL}>
+              {responseFetch.cardURL}
+            </a>
           </p>
         )}
-        {responseFetch !== "" && !responseFetch.success && (
+        {responseFetch !== '' && !responseFetch.success && (
           <p>Ha ocurrido un error: {responseFetch.error}</p>
         )}
       </fieldset>
