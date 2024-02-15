@@ -1,8 +1,15 @@
-import PropTypes from 'prop-types';
-import ButtonLarge from './ButtonLarge';
-import GetAvatar from './GetAvatar';
+import PropTypes from "prop-types";
+import ButtonLarge from "./ButtonLarge";
+import GetAvatar from "./GetAvatar";
 
-function Form({ data, changeData, updateAvatarAuthor, updateAvatarProject, onSubmit,responseFetch }) {
+function Form({
+  data,
+  changeData,
+  updateAvatarAuthor,
+  updateAvatarProject,
+  onSubmit,
+  responseFetch,
+}) {
   const handleProyectName = (event) => {
     const inputName = event.target.name;
     const inputValue = event.target.value;
@@ -126,8 +133,16 @@ function Form({ data, changeData, updateAvatarAuthor, updateAvatarProject, onSub
           value={data.photo}
           onChange={handleProyectName}
         /> */}
-        <ButtonLarge text="Guardar Proyecto" onSubmit={onSubmit}/>
-        {responseFetch.success && <p>Tu proyecto ha sido creado en la siguiente dirección: <a href={success.cardURL}></a></p>}
+        <ButtonLarge text="Guardar Proyecto" onSubmit={onSubmit} />
+        {responseFetch !== "" && responseFetch.success && (
+          <p>
+            Tu proyecto ha sido creado en la siguiente dirección:{" "}
+            <a href={responseFetch.cardURL}>{responseFetch.cardURL}</a>
+          </p>
+        )}
+        {responseFetch !== "" && !responseFetch.success && (
+          <p>Ha ocurrido un error: {responseFetch.error}</p>
+        )}
       </fieldset>
     </form>
   );
@@ -138,7 +153,8 @@ Form.propTypes = {
   changeData: PropTypes.func.isRequired,
   updateAvatarAuthor: PropTypes.func.isRequired,
   updateAvatarProject: PropTypes.func.isRequired,
-  onSubmit:PropTypes.bool,
-  responseFetch:PropTypes.array
+  onSubmit: PropTypes.func.isRequired,
+  responseFetch: PropTypes.array,
+  success: PropTypes.bool,
 };
 export default Form;
