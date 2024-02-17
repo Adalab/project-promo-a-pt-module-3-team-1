@@ -1,4 +1,4 @@
-TARJETAS DE PRESENTACIÓN
+**TARJETAS DE PRESENTACIÓN**
 
 Este proyecto consiste en una colección de tarjetas de presentación personalizables y creativas, diseñadas para destacar tu información personal o la de tu empresa de una manera actualizada y profesional.
 
@@ -7,7 +7,7 @@ Demostración Visual:
  🔗 (http://beta.adalab.es/project-promo-a-pt-module-3-team-1/)
 
 
-¿Cómo Usar?
+**¿Cómo Usar?**
 
 Clona el Repositorio:
 
@@ -22,7 +22,8 @@ npm install
 ```
 
 
-Personaliza las Tarjetas: 
+
+**Personaliza las Tarjetas:**
 
 Abre el archivo index.html en tu navegador web. 
 
@@ -30,7 +31,7 @@ Edita el contenido de las tarjetas utilizando un editor de texto para ajustarlo 
 
 
 
-Tecnologías Utilizadas:
+**Tecnologías Utilizadas:**
 
 HTML: Estructura básica de las tarjetas de presentación.
 
@@ -39,12 +40,13 @@ CSS: Estilos y diseño para hacer las tarjetas visualmente atractivas.
 JavaScrip: Interactividad y funcionalidad para la personalización de las tarjetas.
 
 
-Contribución y contacto:
+
+**Contribución y contacto:**
 
 Si deseas contribuir a este proyecto, tienes dudas o comentarios, contacta con nosotras 🙂.
 
 
-Autoras:
+**Autoras:**
 
 @AntiaNavajasGarrido
 
