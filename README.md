@@ -37,7 +37,7 @@ HTML: Estructura básica de las tarjetas de presentación.
 
 CSS: Estilos y diseño para hacer las tarjetas visualmente atractivas.
 
-JavaScrip: Interactividad y funcionalidad para la personalización de las tarjetas.
+React: Interactividad y funcionalidad para la personalización de las tarjetas.
 
 
 
@@ -52,9 +52,9 @@ Si deseas contribuir a este proyecto, tienes dudas o comentarios, contacta con n
 
 @belenviton
 
-@SaraSzCr
-
 @mariabote
+
+@SaraSzCr
 
 @Nanakuh
 
