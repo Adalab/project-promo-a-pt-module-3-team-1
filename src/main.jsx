@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './components/App.jsx'
+// import LandingApp from './components/LandingApp.jsx'
 import { HashRouter} from 'react-router-dom';
 
 

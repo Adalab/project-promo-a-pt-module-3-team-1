@@ -101,6 +101,12 @@ fieldset {
     grid-template-columns: 6fr 5fr;
     gap: 2rem;
   }
+
+  .main_landing{
+    max-width: 980px;
+    margin-inline: auto;
+
+  }
 }
 
 
@@ -111,6 +117,14 @@ fieldset {
 @media screen and (min-width: 768px) {
   .hero {
     grid-column: span 2;
+  }
+
+  .card_landing{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    width: 700px;
+    gap: 20px;
   }
 }
 
