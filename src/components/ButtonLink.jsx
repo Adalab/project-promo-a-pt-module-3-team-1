@@ -1,9 +1,12 @@
-function ButtonLink () {
+import { Link } from "react-router-dom";
 
+function ButtonLink() {
   return (
-    <a className="button--link" href="./LandingApp">
-      Ver proyectos
-    </a>
+    <>
+      <Link className="button--link" to="/">
+        Ver proyectos
+      </Link>
+    </>
   );
 }
 

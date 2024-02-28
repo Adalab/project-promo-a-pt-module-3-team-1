@@ -16,7 +16,7 @@ function ButtonLarge({ text = "Guardar", onSubmit }) {
 }
 ButtonLarge.propTypes = {
   text: PropTypes.string.isRequired,
-  onSubmit:PropTypes
+  onSubmit:PropTypes.func.isRequired,
 };
 
 export default ButtonLarge;

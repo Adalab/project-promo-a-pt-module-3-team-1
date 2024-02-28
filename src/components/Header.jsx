@@ -8,15 +8,15 @@ function Header() {
       >
         <img
           className="header__companyLogo"
-          src="./images/laptop-code-solid.svg"
+          src="./images/favicon.png"
           alt="Logo proyectos molones"
         />
-        <h1 className="header__title">Proyectos molones</h1>
+        <h1 className="header__title">HomeHelpers</h1>
       </a>
       <img
         className="logoSponsor"
-        src="./images/adalab.png"
-        alt="Logo Adalab"
+        src="./images/logo.jpeg"
+        alt="Logo HomeHelpers"
       />
     </header>
   );
