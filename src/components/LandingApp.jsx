@@ -7,7 +7,7 @@ function LandingApp() {
       <div className="container">
         <main className="main_landing">
           <section className="hero">
-            <h2 className="title">Proyectos molones</h2>
+            <h2 className="title">HomeHelpers</h2>
             <p className="hero__text">
               Escaparate en línea para recoger ideas a través de la tecnología
             </p>
@@ -31,7 +31,7 @@ function LandingApp() {
                   <h3 className="card__name">Emmelie Bjôrklund</h3>
                 </div>
                 <div className="card__project">
-                  <h3 className="card__name">Elegant Workspace</h3>
+                  <h3 className="card__slogan">Elegant Workspace</h3>
                   <p className="card__slogan">Diseños Exclusivos</p>
                   <h3 className="card__descriptionTitle">Product description</h3>
                   <p className="card__description">
@@ -70,7 +70,7 @@ function LandingApp() {
                   <h3 className="card__name">Emmelie Bjôrklund</h3>
                 </div>
                 <div className="card__project">
-                  <h3 className="card__name">Elegant Workspace</h3>
+                  <h3 className="card__slogan">Elegant Workspace</h3>
                   <p className="card__slogan">Diseños Exclusivos</p>
                   <h3 className="card__descriptionTitle">Product description</h3>
                   <p className="card__description">
@@ -109,7 +109,7 @@ function LandingApp() {
                   <h3 className="card__name">Emmelie Bjôrklund</h3>
                 </div>
                 <div className="card__project">
-                  <h3 className="card__name">Elegant Workspace</h3>
+                  <h3 className="card__slogan">Elegant Workspace</h3>
                   <p className="card__slogan">Diseños Exclusivos</p>
                   <h3 className="card__descriptionTitle">Product description</h3>
                   <p className="card__description">
@@ -148,7 +148,7 @@ function LandingApp() {
                   <h3 className="card__name">Emmelie Bjôrklund</h3>
                 </div>
                 <div className="card__project">
-                  <h3 className="card__name">Elegant Workspace</h3>
+                  <h3 className="card__slogan">Elegant Workspace</h3>
                   <p className="card__slogan">Diseños Exclusivos</p>
                   <h3 className="card__descriptionTitle">Product description</h3>
                   <p className="card__description">

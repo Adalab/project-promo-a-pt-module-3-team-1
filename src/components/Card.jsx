@@ -24,7 +24,7 @@ function Card({ data }) {
         </div>
 
         <div className="card__project">
-          <h3 className="card__name">
+          <h3 className="card__slogan">
             {' '}
             {data.name === '' ? 'Elegant Workspace' : data.name}
           </h3>
